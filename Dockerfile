@@ -1,11 +1,12 @@
 FROM python:3.10-slim-buster
-WORKDIR /app
-COPY requirements.txt /app/
+
 RUN apt update && apt upgrade -y
-RUN apt install git python3-pip ffmpeg -y
-COPY . .
-RUN pip install -r requirements.txt
+RUN apt install git -y
+COPY requirements.txt /requirements.txt
 
-COPY . /app
-
-CMD ["python3", "loader.py"]
+RUN cd /
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+RUN mkdir /MINNALMURALI
+WORKDIR /MINNALMURALI
+COPY start.sh /start.sh
+CMD ["/bin/bash", "/start.sh"]
