@@ -9,4 +9,4 @@ fi
 cd /TG-MULTI-BOT
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
-python3 lilsa.py
+python3 loader.py
