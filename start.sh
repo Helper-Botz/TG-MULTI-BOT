@@ -6,7 +6,8 @@ else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /TG-MULTI-BOT
 fi
-cd /TG-MULTI-BOT
+apt update && apt upgrade -y
+apt install ffmpeg -y
 pip3 install -U -r requirements.txt
-echo "Starting Bot...."
+echo "Starting the Bot...."
 python3 loader.py
