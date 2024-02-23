@@ -16,7 +16,7 @@ ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.
 
 DB_URL = os.environ.get("DB_URL", "")
 
-DB_NAME = os.environ.get("DB_NAME", "tg-multi-bot")
+DB_NAME = os.environ.get("DB_NAME", "Cluster0")
 
 RemoveBG_API = os.environ.get("RemoveBG_API", "")
 
