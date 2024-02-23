@@ -9,7 +9,7 @@ from utils.stickerset import *
     
 MAX_STICKERS = (120)  # would be better if we could fetch this limit directly from telegram
 SUPPORTED_TYPES = ["jpeg", "png", "webp"]
-
+KGF = "JAAMBOO_BOT"
 
 @Client.on_message(filters.command("get_sticker"))
 async def sticker_image(_, message: Message):
@@ -39,7 +39,7 @@ async def sticker_image(_, message: Message):
 
 @Client.on_message(filters.command("kang"))
 async def kang(client, message: Message):
-    BOT_USERNAME = client.username
+    BOT_USERNAME = KGF
     if not message.reply_to_message:
         return await message.reply_text("Reply to a sticker/image to kang it.")
     if not message.from_user:
